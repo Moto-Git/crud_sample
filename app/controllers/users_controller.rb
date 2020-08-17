@@ -15,6 +15,17 @@ class UsersController < ApplicationController
     User.create(user_params)
   end
 
+  # 登録を削除するためのアクション
+  def destroy
+    user = User.find(params[:id])
+    user.delete
+  end
+
+  # def destroy
+  #   user = User.find(params[:id])
+  #   user.destroy
+  # end
+
   # 個人情報などの公開してはデータはprivateに収める
   private
 
