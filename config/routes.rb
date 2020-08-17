@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # 新規登録を行うためのルーティング
   post "/users", to: "users#create"
+
+  # 削除を行うためのルーティング
+  delete "/users/:id", to: "users#destroy"
+  # delete "/users/:id", to: "users#destroy"
 end
